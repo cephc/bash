@@ -1,0 +1,21 @@
+#!/bin/bash
+
+echo Who are you?
+read who
+echo Hey, $who!
+
+echo How old are you, $who?
+read age
+
+if [ "$age" -gt 20 ]
+then
+    echo Aye! Have a drink with me!
+else 
+    echo Go home, youre too young to drink.
+fi
+
+FILES=/Users/Student/dev/*
+for file in $FILES
+do
+    echo $(basename $file)
+done
